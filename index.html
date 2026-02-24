@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>旅遊行程管理</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar-logo">YTP Travel</div>
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-page="home">主頁</button>
+        <button class="nav-item" data-page="spots">景點、活動</button>
+        <button class="nav-item" data-page="final">最終行程</button>
+        <button class="nav-item" data-page="notifications">通知</button>
+        <button class="nav-item" data-page="profile">個人檔案</button>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="main-header">
+        <div class="main-title" id="pageTitle">主頁</div>
+        <div class="main-avatar" aria-label="使用者頭像" title="使用者">
+          <span class="avatar-initial">Y</span>
+        </div>
+      </header>
+
+      <section class="page page-home active-page" data-page-id="home">
+        <div class="photo-grid">
+          <div class="photo-large">
+            <img src="assets/hero.jpg" alt="旅遊照片" />
+          </div>
+          <div class="photo-row">
+            <div class="photo-small">
+              <img src="assets/hero.jpg" alt="旅遊照片" />
+            </div>
+            <div class="photo-small">
+              <img src="assets/hero.jpg" alt="旅遊照片" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" data-page-id="spots">
+        <div class="empty-state">景點、活動頁面尚未完成。</div>
+      </section>
+
+      <section class="page" data-page-id="final">
+        <div class="empty-state">最終行程頁面尚未完成。</div>
+      </section>
+
+      <section class="page" data-page-id="notifications">
+        <div class="empty-state">通知頁面尚未完成。</div>
+      </section>
+
+      <section class="page" data-page-id="profile">
+        <div class="empty-state">個人檔案頁面尚未完成。</div>
+      </section>
+    </main>
+
+    <aside class="itinerary-panel">
+      <h2 class="panel-title">當日行程</h2>
+      <div class="itinerary-card">
+        <div class="itinerary-date">2026 / 02 / 24（二）</div>
+        <ul class="itinerary-list">
+          <li class="itinerary-item">
+            <span class="time">08:30</span>
+            <div class="detail">
+              <div class="name">集合出發</div>
+              <div class="sub">學校正門口</div>
+            </div>
+          </li>
+          <li class="itinerary-item">
+            <span class="time">10:00</span>
+            <div class="detail">
+              <div class="name">景點 A 參觀</div>
+              <div class="sub">導覽＋自由活動</div>
+            </div>
+          </li>
+          <li class="itinerary-item">
+            <span class="time">12:30</span>
+            <div class="detail">
+              <div class="name">午餐時間</div>
+              <div class="sub">當地特色餐廳</div>
+            </div>
+          </li>
+          <li class="itinerary-item">
+            <span class="time">15:00</span>
+            <div class="detail">
+              <div class="name">景點 B 散策</div>
+              <div class="sub">拍照打卡＋點心</div>
+            </div>
+          </li>
+          <li class="itinerary-item">
+            <span class="time">18:30</span>
+            <div class="detail">
+              <div class="name">返回學校</div>
+              <div class="sub">預估抵達時間</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
