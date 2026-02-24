@@ -92,7 +92,30 @@
       </section>
 
       <section class="page" data-page-id="spots">
-        <div class="empty-state">景點、活動頁面尚未完成。</div>
+        <div class="spots-page">
+          <div class="spots-search-bar">
+            <span class="spots-search-title">抽象描述</span>
+            <input
+              type="text"
+              class="spots-search-input"
+              placeholder="輸入關鍵字搜尋景點或主題..."
+              aria-label="搜尋景點或主題"
+            />
+            <button
+              class="spots-search-button"
+              type="button"
+              aria-label="搜尋"
+            >
+              ▸
+            </button>
+          </div>
+
+          <div class="spots-gallery-wrapper">
+            <div class="spots-gallery" id="spotsGallery">
+              <!-- 由 JavaScript 動態插入圖片卡片 -->
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="page" data-page-id="final">
@@ -109,8 +132,8 @@
     </main>
 
     <aside class="itinerary-panel">
-      <h2 class="panel-title">當日行程</h2>
-      <div class="itinerary-card">
+      <h2 class="panel-title" id="panelTitle">當日行程</h2>
+      <div class="itinerary-card itinerary-card-day" data-panel="day">
         <div class="itinerary-date">2026 / 02 / 24（二）</div>
         <ul class="itinerary-list">
           <li class="itinerary-item">
@@ -149,6 +172,14 @@
             </div>
           </li>
         </ul>
+      </div>
+
+      <div
+        class="itinerary-card itinerary-card-selected is-hidden"
+        data-panel="selected"
+      >
+        <div class="selected-empty">尚未選擇任何景點。</div>
+        <ul class="selected-list" id="selectedSpots"></ul>
       </div>
     </aside>
   </div>
