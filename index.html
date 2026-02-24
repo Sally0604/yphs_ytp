@@ -22,22 +22,70 @@
     <main class="main-content">
       <header class="main-header">
         <div class="main-title" id="pageTitle">主頁</div>
-        <div class="main-avatar" aria-label="使用者頭像" title="使用者">
+        <button class="main-avatar" aria-label="使用者頭像" title="使用者" type="button">
           <span class="avatar-initial">Y</span>
-        </div>
+        </button>
       </header>
 
       <section class="page page-home active-page" data-page-id="home">
         <div class="photo-grid">
-          <div class="photo-large">
-            <img src="assets/hero.jpg" alt="旅遊照片" />
+          <div class="photo-large photo-gallery">
+            <button
+              class="gallery-arrow gallery-arrow-left"
+              type="button"
+              aria-label="上一張"
+              data-photo-index="0"
+            >
+              ‹
+            </button>
+            <button
+              class="gallery-arrow gallery-arrow-right"
+              type="button"
+              aria-label="下一張"
+              data-photo-index="0"
+            >
+              ›
+            </button>
+            <img class="photo-img js-photo" data-photo-index="0" alt="旅遊照片" />
           </div>
           <div class="photo-row">
-            <div class="photo-small">
-              <img src="assets/hero.jpg" alt="旅遊照片" />
+            <div class="photo-small photo-gallery">
+              <button
+                class="gallery-arrow gallery-arrow-left"
+                type="button"
+                aria-label="上一張"
+                data-photo-index="1"
+              >
+                ‹
+              </button>
+              <button
+                class="gallery-arrow gallery-arrow-right"
+                type="button"
+                aria-label="下一張"
+                data-photo-index="1"
+              >
+                ›
+              </button>
+              <img class="photo-img js-photo" data-photo-index="1" alt="旅遊照片" />
             </div>
-            <div class="photo-small">
-              <img src="assets/hero.jpg" alt="旅遊照片" />
+            <div class="photo-small photo-gallery">
+              <button
+                class="gallery-arrow gallery-arrow-left"
+                type="button"
+                aria-label="上一張"
+                data-photo-index="2"
+              >
+                ‹
+              </button>
+              <button
+                class="gallery-arrow gallery-arrow-right"
+                type="button"
+                aria-label="下一張"
+                data-photo-index="2"
+              >
+                ›
+              </button>
+              <img class="photo-img js-photo" data-photo-index="2" alt="旅遊照片" />
             </div>
           </div>
         </div>

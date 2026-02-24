@@ -117,6 +117,8 @@ button {
 }
 
 .main-avatar {
+  border: none;
+  padding: 0;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -127,6 +129,7 @@ button {
   color: #111827;
   font-weight: 600;
   box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+  cursor: pointer;
 }
 
 .avatar-initial {
@@ -146,6 +149,10 @@ button {
   display: flex;
   flex-direction: column;
   gap: 18px;
+}
+
+.photo-gallery {
+  position: relative;
 }
 
 .photo-large {
@@ -181,6 +188,48 @@ button {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-pill);
+  border: none;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--primary-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 12px 24px rgba(148, 163, 184, 0.4);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.12s ease, background 0.18s ease;
+}
+
+.photo-gallery:hover .gallery-arrow {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.gallery-arrow-left {
+  left: 8px;
+}
+
+.gallery-arrow-right {
+  right: 8px;
+}
+
+.gallery-arrow:hover {
+  background: #ffffff;
+}
+
+.gallery-arrow:active {
+  transform: translateY(-50%) scale(0.96);
 }
 
 .empty-state {
